@@ -601,6 +601,17 @@
 		return EXIT_SUCCESS;
 	}
 
+	int new_display(field Field, settings Settings, point Cursor) {
+		static char* screenBuffer = NULL;
+		static point screenSize = {-1, -1};
+		/*
+			Each time, write to newScreenBuffer.
+			Compare to screenBuffer (how? because escapes don't work that way).
+				Option: ScreenBuffer is made of displayStrings (ie. const char*[2])
+			Only print changes, using set cursor.
+		*/
+	}
+
 	const char** getStr(minepoint MinePoint) {
 		switch (MinePoint.Display) {
 			case HIDDEN:
