@@ -1,0 +1,15 @@
+Some caveats about this project
+
+- It was created as a uni assignment several years ago.
+  The C may make you cry.
+
+- The uni assignment called for a far simpler program.
+  Hence the feature defines and isatty magic.
+  (I needed to ensure the "correct" behaviour in the automated tests,
+   while still allowing interactive users to see the real program)
+
+- I didn't want to bother learning curses, so I use raw ANSI escapes.
+  This bit me in the ass, because I redraw the whole screen every time you move the cursor.
+  It is slow and nigh unplayable on all but the smallest field sizes.
+
+- The git history is almost non-existent since this predates my common usage of git.
